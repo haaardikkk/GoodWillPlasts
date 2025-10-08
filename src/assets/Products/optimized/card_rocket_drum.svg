@@ -1,0 +1,40 @@
+<svg width="560" height="320" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="drumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="capGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#495057;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#343a40;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="560" height="320" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Drum shadow -->
+  <ellipse cx="285" cy="285" rx="80" ry="15" fill="#000000" opacity="0.1"/>
+  
+  <!-- Main drum body -->
+  <rect x="200" y="100" width="160" height="180" fill="url(#drumGradient)" rx="12"/>
+  
+  <!-- Narrow mouth/neck -->
+  <rect x="240" y="80" width="80" height="30" fill="url(#drumGradient)" rx="6"/>
+  
+  <!-- Cap/lid -->
+  <ellipse cx="280" cy="80" rx="45" ry="12" fill="url(#capGradient)"/>
+  <ellipse cx="280" cy="75" rx="40" ry="8" fill="#6c757d"/>
+  
+  <!-- Handle -->
+  <rect x="180" y="150" width="12" height="50" fill="url(#capGradient)" rx="6"/>
+  <rect x="368" y="150" width="12" height="50" fill="url(#capGradient)" rx="6"/>
+  
+  <!-- Label area -->
+  <rect x="220" y="140" width="120" height="80" fill="#ffffff" opacity="0.8" rx="4"/>
+  
+  <!-- Brand text -->
+  <text x="280" y="165" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ROCKET</text>
+  <text x="280" y="185" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">DRUM</text>
+  <text x="280" y="205" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="10">NARROW MOUTH</text>
+</svg>

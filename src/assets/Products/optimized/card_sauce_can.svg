@@ -1,0 +1,39 @@
+<svg width="560" height="320" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="canGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce4ec;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8bbd9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="capGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c2185b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="560" height="320" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Can shadow -->
+  <ellipse cx="285" cy="285" rx="70" ry="12" fill="#000000" opacity="0.1"/>
+  
+  <!-- Main can body -->
+  <rect x="210" y="130" width="140" height="150" fill="url(#canGradient)" rx="8"/>
+  
+  <!-- Narrow neck -->
+  <rect x="250" y="110" width="60" height="30" fill="url(#canGradient)" rx="4"/>
+  
+  <!-- Cap -->
+  <ellipse cx="280" cy="110" rx="35" ry="10" fill="url(#capGradient)"/>
+  <ellipse cx="280" cy="105" rx="30" ry="7" fill="#ec407a"/>
+  
+  <!-- Handle -->
+  <path d="M 180 180 Q 160 200 180 220" stroke="url(#capGradient)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Label area -->
+  <rect x="230" y="170" width="100" height="80" fill="#ffffff" opacity="0.9" rx="5"/>
+  
+  <!-- Brand text -->
+  <text x="280" y="195" text-anchor="middle" fill="#c2185b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SAUCE</text>
+  <text x="280" y="215" text-anchor="middle" fill="#e91e63" font-family="Arial, sans-serif" font-size="12">CAN</text>
+  <text x="280" y="235" text-anchor="middle" fill="#f06292" font-family="Arial, sans-serif" font-size="10">PHENYL</text>
+</svg>

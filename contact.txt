@@ -1,0 +1,428 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { 
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem
+} from "@/components/ui/select";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+
+const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
+  const [formData, setFormData] = useState({
+    companyName: "",
+    contactPerson: "",
+    email: "",
+    phone: "",
+    productInterest: "Select product category",
+    message: ""
+  });
+  
+  const [formStatus, setFormStatus] = useState({
+    isSubmitting: false,
+    isSubmitted: false,
+    isError: false,
+    message: ""
+  });
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus({ ...formStatus, isSubmitting: true, message: "Sending your message..." });
+    
+    // Validate form
+    if (!formData.companyName || !formData.contactPerson || !formData.email || !formData.message) {
+      setFormStatus({
+        isSubmitting: false,
+        isSubmitted: false,
+        isError: true,
+        message: "Please fill in all required fields."
+      });
+      return;
+    }
+    
+    try {
+      // In a real implementation, you would send this data to your backend
+      // For now, we'll simulate a successful submission
+      
+      // This is where you would typically make an API call to your email service
+      // Example: await fetch('/api/send-email', { method: 'POST', body: JSON.stringify(formData) });
+      
+      console.log("Email would be sent to: goodwillplast2015@gmail.com");
+      console.log("Form data:", formData);
+      
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      setFormStatus({
+        isSubmitting: false,
+        isSubmitted: true,
+        isError: false,
+        message: "Thank you! Your message has been sent successfully."
+      });
+      
+      // Reset form
+      setFormData({
+        companyName: "",
+        contactPerson: "",
+        email: "",
+        phone: "",
+        productInterest: "Select product category",
+        message: ""
+      });
+      
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setFormStatus({
+        isSubmitting: false,
+        isSubmitted: false,
+        isError: true,
+        message: "There was an error sending your message. Please try again."
+      });
+    }
+  };
+
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6 text-primary" />,
+      title: "Phone",
+      details: ["+91 9811347037", "+91 7217679595"]
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-primary" />,
+      title: "Email",
+      details: ["goodwillplast2015@gmail.com"]
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-primary" />,
+      title: "Address",
+      details: ["647,Phase-2, Barhi industrial area,Sonepat,Haryana 131101"]
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-primary" />,
+      title: "Business Hours",
+      details: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sun: closed"]
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-24 bg-surface-dark" ref={ref}>
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div 
+            className="flex items-center justify-center space-x-2 text-primary mb-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <motion.div 
+              className="w-8 h-0.5 bg-primary"
+              initial={{ width: 0 }}
+              animate={isInView ? { width: "2rem" } : { width: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            />
+            <span className="text-sm font-medium">GET IN TOUCH</span>
+            <motion.div 
+              className="w-8 h-0.5 bg-primary"
+              initial={{ width: 0 }}
+              animate={isInView ? { width: "2rem" } : { width: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            />
+          </motion.div>
+          <motion.h2 
+            className="text-4xl lg:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            Ready to Start Your 
+            <motion.span 
+              className="bg-gradient-primary bg-clip-text text-transparent"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            > Project?</motion.span>
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            Contact our expert team for custom quotes, product inquiries, or technical support. 
+            We're here to help you find the perfect HDPE solution.
+          </motion.p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Contact Information */}
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <motion.h3 
+              className="text-2xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
+              Contact Information
+            </motion.h3>
+            {contactInfo.map((info, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <Card className="bg-card border-border hover:border-primary transition-all duration-500 group">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <motion.div 
+                        className="flex-shrink-0 w-12 h-12 bg-gradient-surface rounded-lg flex items-center justify-center"
+                        whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0 0 20px hsl(195 100% 50% / 0.3)" }}
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      >
+                        {info.icon}
+                      </motion.div>
+                      <div>
+                        <motion.h4 
+                          className="font-semibold mb-2 group-hover:text-primary transition-all duration-300"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          {info.title}
+                        </motion.h4>
+                        {info.details.map((detail, detailIndex) => (
+                          <motion.p 
+                            key={detailIndex} 
+                            className="text-muted-foreground text-sm"
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                            transition={{ duration: 0.4, delay: 1.6 + index * 0.1 + detailIndex * 0.05 }}
+                          >
+                            {detail}
+                          </motion.p>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div 
+            className="lg:col-span-2"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <motion.div
+              whileHover={{ y: -5, scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <Card className="bg-card border-border hover:shadow-glow transition-all duration-500">
+                <CardContent className="p-8">
+                  <motion.h3 
+                    className="text-2xl font-bold mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 1.4 }}
+                  >
+                    Send us a message
+                  </motion.h3>
+                  <motion.form 
+                    className="space-y-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8, delay: 1.6 }}
+                    onSubmit={handleSubmit}
+                  >
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                        transition={{ duration: 0.6, delay: 1.8 }}
+                      >
+                        <label className="block text-sm font-medium mb-2">Company Name *</label>
+                        <Input 
+                          name="companyName"
+                          value={formData.companyName}
+                          onChange={handleChange}
+                          placeholder="Your company name" 
+                          className="bg-background border-border" 
+                          required
+                        />
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                        transition={{ duration: 0.6, delay: 1.8 }}
+                      >
+                        <label className="block text-sm font-medium mb-2">Contact Person *</label>
+                        <Input 
+                          name="contactPerson"
+                          value={formData.contactPerson}
+                          onChange={handleChange}
+                          placeholder="Your full name" 
+                          className="bg-background border-border" 
+                          required
+                        />
+                      </motion.div>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                        transition={{ duration: 0.6, delay: 2 }}
+                      >
+                        <label className="block text-sm font-medium mb-2">Email *</label>
+                        <Input 
+                          type="email" 
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="your@email.com" 
+                          className="bg-background border-border" 
+                          required
+                        />
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                        transition={{ duration: 0.6, delay: 2 }}
+                      >
+                        <label className="block text-sm font-medium mb-2">Phone</label>
+                        <Input 
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="Your phone number" 
+                          className="bg-background border-border" 
+                        />
+                      </motion.div>
+                    </div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.6, delay: 2.2 }}
+                    >
+                      <label className="block text-sm font-medium mb-2">Product Interest</label>
+                      <Select
+                        value={formData.productInterest}
+                        onValueChange={(value) => setFormData((prev) => ({ ...prev, productInterest: value }))}
+                      >
+                        <SelectTrigger aria-label="Select a product" className="w-full bg-background border border-border h-11 focus:ring-2 focus:ring-primary focus:border-primary">
+                          <SelectValue placeholder="🔍 Select product category" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-popover text-popover-foreground border border-border shadow-lg">
+                          <SelectGroup>
+                            <SelectLabel className="text-xs text-muted-foreground px-2">Drums</SelectLabel>
+                            <SelectItem value="Open Top Drum - 50L">🛢️ Open Top Drum - 50L</SelectItem>
+                            <SelectItem value="Open Top Drum - 35L">🪣 Open Top Drum - 35L</SelectItem>
+                            <SelectItem value="Double Layered Drum - 50L">🛡️ Double Layered Drum - 50L</SelectItem>
+                            <SelectItem value="Rocket Drum - 50L">🚀 Rocket Drum - 50L</SelectItem>
+                            <SelectItem value="Taper Drum - 50L">📦 Taper Drum - 50L</SelectItem>
+                            <SelectItem value="Glossy Open Mouth - 35L">✨ Glossy Open Mouth - 35L</SelectItem>
+                          </SelectGroup>
+                          <SelectGroup>
+                            <SelectLabel className="text-xs text-muted-foreground px-2">Cans</SelectLabel>
+                            <SelectItem value="Narrow Mouth Can - 20L">🥤 Narrow Mouth Can - 20L</SelectItem>
+                            <SelectItem value="Narrow Mouth Deluxe Can - 35L">✨ Narrow Mouth Deluxe Can - 35L</SelectItem>
+                            <SelectItem value="Sauce Can - 5L">🧴 Sauce Can - 5L</SelectItem>
+                            <SelectItem value="Mauser Jerry Can - 35L">🏺 Mauser Jerry Can - 35L</SelectItem>
+                            <SelectItem value="Jerry Can - 35L">⛽ Jerry Can - 35L</SelectItem>
+                          </SelectGroup>
+                          <SelectGroup>
+                            <SelectLabel className="text-xs text-muted-foreground px-2">Other</SelectLabel>
+                            <SelectItem value="Pet Jar and Preform">🏺 Pet Jar and Preform</SelectItem>
+                            <SelectItem value="Custom Solutions">🔧 Custom Solutions</SelectItem>
+                          </SelectGroup>
+                        </SelectContent>
+                      </Select>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.6, delay: 2.4 }}
+                    >
+                      <label className="block text-sm font-medium mb-2">Message *</label>
+                      <Textarea 
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell us about your requirements, quantities, specifications, etc."
+                        className="min-h-32 bg-background border-border"
+                        required
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.6, delay: 2.6 }}
+                      className="space-y-4"
+                    >
+                      {formStatus.message && (
+                        <div className={`p-3 rounded-md text-sm ${formStatus.isError ? 'bg-red-500/20 text-red-500' : formStatus.isSubmitted ? 'bg-green-500/20 text-green-500' : 'bg-blue-500/20 text-blue-500'}`}>
+                          {formStatus.message}
+                        </div>
+                      )}
+                      
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Button 
+                          type="submit" 
+                          size="lg" 
+                          className="w-full bg-gradient-primary shadow-industrial hover:shadow-glow transition-all duration-300"
+                          disabled={formStatus.isSubmitting}
+                        >
+                          {formStatus.isSubmitting ? 'Sending...' : 'Send Message'}
+                        </Button>
+                      </motion.div>
+                    </motion.div>
+                  </motion.form>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

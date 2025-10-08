@@ -1,0 +1,63 @@
+<svg width="800" height="640" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="taperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#bbdefb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#90caf9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="capGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976d2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565c0;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="waterShine" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="640" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Taper shadow -->
+  <ellipse cx="405" cy="580" rx="120" ry="25" fill="#000000" opacity="0.15"/>
+  
+  <!-- Main taper body (tapered shape) -->
+  <path d="M 285 560 L 515 560 L 470 200 L 330 200 Z" fill="url(#taperGradient)" stroke="#64b5f6" stroke-width="3"/>
+  
+  <!-- Water shine effect -->
+  <ellipse cx="360" cy="300" rx="60" ry="120" fill="url(#waterShine)"/>
+  
+  <!-- Neck -->
+  <rect x="370" y="160" width="60" height="50" fill="url(#taperGradient)" rx="8"/>
+  
+  <!-- Cap -->
+  <ellipse cx="400" cy="160" rx="40" ry="15" fill="url(#capGradient)"/>
+  <ellipse cx="400" cy="150" rx="32" ry="10" fill="#2196f3"/>
+  <circle cx="400" cy="145" r="6" fill="#1976d2"/>
+  
+  <!-- Handle -->
+  <path d="M 250 320 Q 220 360 250 400" stroke="url(#capGradient)" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M 255 325 Q 230 360 255 395" stroke="#1976d2" stroke-width="10" fill="none" stroke-linecap="round"/>
+  
+  <!-- Water level indicator -->
+  <path d="M 295 480 L 505 480 L 485 280 L 315 280 Z" fill="#42a5f5" opacity="0.3"/>
+  
+  <!-- Label area -->
+  <rect x="340" y="320" width="160" height="120" fill="#ffffff" opacity="0.95" rx="8"/>
+  <rect x="345" y="325" width="150" height="110" fill="#e3f2fd" rx="6" stroke="#90caf9" stroke-width="2"/>
+  
+  <!-- Brand text -->
+  <text x="420" y="360" text-anchor="middle" fill="#1565c0" font-family="Arial, sans-serif" font-size="24" font-weight="bold">WATER TAPER</text>
+  <text x="420" y="385" text-anchor="middle" fill="#1976d2" font-family="Arial, sans-serif" font-size="16">TAPERED DRUM</text>
+  <text x="420" y="410" text-anchor="middle" fill="#42a5f5" font-family="Arial, sans-serif" font-size="12">SPACE EFFICIENT DESIGN</text>
+  
+  <!-- Specifications -->
+  <circle cx="320" cy="520" r="3" fill="#1976d2"/>
+  <text x="330" y="525" fill="#1565c0" font-family="Arial, sans-serif" font-size="12">100L CAPACITY</text>
+  
+  <circle cx="320" cy="540" r="3" fill="#1976d2"/>
+  <text x="330" y="545" fill="#1565c0" font-family="Arial, sans-serif" font-size="12">WATER STORAGE</text>
+  
+  <circle cx="320" cy="560" r="3" fill="#1976d2"/>
+  <text x="330" y="565" fill="#1565c0" font-family="Arial, sans-serif" font-size="12">UV PROTECTED</text>
+</svg>

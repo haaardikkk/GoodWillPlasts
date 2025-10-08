@@ -1,0 +1,65 @@
+<svg width="800" height="640" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="drumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e9ecef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dee2e6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rimGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c757d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#495057;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="innerShadow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="640" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Drum shadow -->
+  <ellipse cx="405" cy="580" rx="180" ry="40" fill="#000000" opacity="0.15"/>
+  
+  <!-- Drum body -->
+  <rect x="225" y="200" width="350" height="280" fill="url(#drumGradient)" rx="15"/>
+  
+  <!-- Inner shadow for depth -->
+  <rect x="235" y="210" width="330" height="260" fill="url(#innerShadow)" rx="10"/>
+  
+  <!-- Top rim (open mouth) -->
+  <ellipse cx="400" cy="200" rx="175" ry="40" fill="url(#rimGradient)"/>
+  <ellipse cx="400" cy="190" rx="165" ry="30" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="400" cy="185" rx="155" ry="25" fill="#f8f9fa"/>
+  
+  <!-- Bottom rim -->
+  <ellipse cx="400" cy="480" rx="175" ry="40" fill="url(#rimGradient)" opacity="0.7"/>
+  
+  <!-- Handles -->
+  <rect x="180" y="300" width="25" height="100" fill="url(#rimGradient)" rx="12"/>
+  <rect x="595" y="300" width="25" height="100" fill="url(#rimGradient)" rx="12"/>
+  
+  <!-- Handle details -->
+  <rect x="185" y="310" width="15" height="80" fill="#6c757d" rx="7"/>
+  <rect x="600" y="310" width="15" height="80" fill="#6c757d" rx="7"/>
+  
+  <!-- Reinforcement rings -->
+  <ellipse cx="400" cy="250" rx="170" ry="8" fill="#adb5bd" opacity="0.6"/>
+  <ellipse cx="400" cy="430" rx="170" ry="8" fill="#adb5bd" opacity="0.6"/>
+  
+  <!-- Brand text and details -->
+  <text x="400" y="340" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="28" font-weight="bold">OPEN MOUTH</text>
+  <text x="400" y="380" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="20">DRUM</text>
+  <text x="400" y="410" text-anchor="middle" fill="#868e96" font-family="Arial, sans-serif" font-size="14">HDPE CONTAINER</text>
+  
+  <!-- Capacity indicator -->
+  <circle cx="350" cy="520" r="3" fill="#495057"/>
+  <text x="360" y="525" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">200L CAPACITY</text>
+  
+  <!-- Quality marks -->
+  <circle cx="350" cy="540" r="3" fill="#495057"/>
+  <text x="360" y="545" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">FOOD GRADE HDPE</text>
+  
+  <circle cx="350" cy="560" r="3" fill="#495057"/>
+  <text x="360" y="565" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">UV STABILIZED</text>
+</svg>

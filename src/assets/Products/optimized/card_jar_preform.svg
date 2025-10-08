@@ -1,0 +1,51 @@
+<svg width="560" height="320" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffecb3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="preformGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e1f5fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b3e5fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffc107;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8f00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="560" height="320" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Shadows -->
+  <ellipse cx="220" cy="285" rx="50" ry="10" fill="#000000" opacity="0.1"/>
+  <ellipse cx="340" cy="285" rx="30" ry="8" fill="#000000" opacity="0.1"/>
+  
+  <!-- Main jar -->
+  <rect x="170" y="140" width="100" height="140" fill="url(#jarGradient)" rx="8"/>
+  
+  <!-- Jar lid -->
+  <ellipse cx="220" cy="140" rx="50" ry="12" fill="url(#lidGradient)"/>
+  <ellipse cx="220" cy="135" rx="45" ry="8" fill="#ffca28"/>
+  
+  <!-- Jar threads -->
+  <rect x="190" y="150" width="60" height="3" fill="#ffb300" opacity="0.7"/>
+  <rect x="190" y="155" width="60" height="2" fill="#ffb300" opacity="0.5"/>
+  
+  <!-- Preform bottles (smaller) -->
+  <rect x="320" y="180" width="25" height="100" fill="url(#preformGradient)" rx="4"/>
+  <rect x="350" y="190" width="20" height="90" fill="url(#preformGradient)" rx="3"/>
+  <rect x="375" y="185" width="22" height="95" fill="url(#preformGradient)" rx="3"/>
+  
+  <!-- Preform necks -->
+  <rect x="325" y="170" width="15" height="15" fill="url(#preformGradient)" rx="2"/>
+  <rect x="355" y="180" width="10" height="15" fill="url(#preformGradient)" rx="2"/>
+  <rect x="380" y="175" width="12" height="15" fill="url(#preformGradient)" rx="2"/>
+  
+  <!-- Label area -->
+  <rect x="180" y="200" width="80" height="50" fill="#ffffff" opacity="0.9" rx="4"/>
+  
+  <!-- Brand text -->
+  <text x="220" y="220" text-anchor="middle" fill="#ff8f00" font-family="Arial, sans-serif" font-size="12" font-weight="bold">JAR &amp;</text>
+  <text x="220" y="240" text-anchor="middle" fill="#ffc107" font-family="Arial, sans-serif" font-size="10">PREFORMS</text>
+</svg>

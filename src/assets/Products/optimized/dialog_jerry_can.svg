@@ -1,0 +1,69 @@
+<svg width="800" height="640" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="canGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f3f4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="handleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c757d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#495057;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="canShine" cx="25%" cy="25%" r="75%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="640" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Jerry can shadow -->
+  <ellipse cx="405" cy="580" rx="160" ry="35" fill="#000000" opacity="0.15"/>
+  
+  <!-- Main jerry can body -->
+  <rect x="245" y="200" width="310" height="280" fill="url(#canGradient)" rx="25"/>
+  
+  <!-- Shine effect -->
+  <ellipse cx="320" cy="260" rx="100" ry="140" fill="url(#canShine)"/>
+  
+  <!-- Spout/neck -->
+  <rect x="520" y="160" width="70" height="70" fill="url(#canGradient)" rx="15"/>
+  
+  <!-- Cap -->
+  <circle cx="555" cy="170" r="25" fill="url(#handleGradient)"/>
+  <circle cx="555" cy="165" r="20" fill="#6c757d"/>
+  <circle cx="555" cy="160" r="12" fill="#495057"/>
+  
+  <!-- Side handle -->
+  <path d="M 200 280 Q 160 320 200 360" stroke="url(#handleGradient)" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M 205 285 Q 170 320 205 355" stroke="#495057" stroke-width="12" fill="none" stroke-linecap="round"/>
+  
+  <!-- Top handle -->
+  <rect x="320" y="170" width="120" height="20" fill="url(#handleGradient)" rx="10"/>
+  <rect x="325" y="175" width="110" height="12" fill="#495057" rx="6"/>
+  
+  <!-- Reinforcement ribs -->
+  <rect x="260" y="240" width="280" height="4" fill="#dee2e6" opacity="0.8"/>
+  <rect x="260" y="320" width="280" height="4" fill="#dee2e6" opacity="0.8"/>
+  <rect x="260" y="400" width="280" height="4" fill="#dee2e6" opacity="0.8"/>
+  
+  <!-- Label area -->
+  <rect x="280" y="280" width="240" height="120" fill="#ffffff" opacity="0.9" rx="10"/>
+  <rect x="285" y="285" width="230" height="110" fill="#f8f9fa" rx="8" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Brand text -->
+  <text x="400" y="320" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="28" font-weight="bold">JERRY CAN</text>
+  <text x="400" y="350" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="16">HDPE CONTAINER</text>
+  <text x="400" y="375" text-anchor="middle" fill="#868e96" font-family="Arial, sans-serif" font-size="12">MULTI-PURPOSE STORAGE</text>
+  
+  <!-- Specifications -->
+  <circle cx="300" cy="520" r="3" fill="#495057"/>
+  <text x="310" y="525" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">20L CAPACITY</text>
+  
+  <circle cx="300" cy="540" r="3" fill="#495057"/>
+  <text x="310" y="545" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">STACKABLE DESIGN</text>
+  
+  <circle cx="300" cy="560" r="3" fill="#495057"/>
+  <text x="310" y="565" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">EASY POUR SPOUT</text>
+</svg>

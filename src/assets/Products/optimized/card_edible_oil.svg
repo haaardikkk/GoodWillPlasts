@@ -1,0 +1,39 @@
+<svg width="560" height="320" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bottleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe0b2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="capGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f57c00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="560" height="320" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Bottle shadow -->
+  <ellipse cx="285" cy="285" rx="60" ry="12" fill="#000000" opacity="0.1"/>
+  
+  <!-- Main bottle body -->
+  <rect x="220" y="140" width="120" height="140" fill="url(#bottleGradient)" rx="8"/>
+  
+  <!-- Narrow neck -->
+  <rect x="260" y="110" width="40" height="40" fill="url(#bottleGradient)" rx="4"/>
+  
+  <!-- Cap -->
+  <ellipse cx="280" cy="110" rx="25" ry="8" fill="url(#capGradient)"/>
+  <ellipse cx="280" cy="105" rx="20" ry="6" fill="#ffb74d"/>
+  
+  <!-- Handle -->
+  <path d="M 190 180 Q 170 200 190 220" stroke="url(#capGradient)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Label area -->
+  <rect x="240" y="170" width="80" height="80" fill="#ffffff" opacity="0.9" rx="4"/>
+  
+  <!-- Brand text -->
+  <text x="280" y="195" text-anchor="middle" fill="#f57c00" font-family="Arial, sans-serif" font-size="12" font-weight="bold">EDIBLE</text>
+  <text x="280" y="215" text-anchor="middle" fill="#ff9800" font-family="Arial, sans-serif" font-size="12">OIL</text>
+  <text x="280" y="235" text-anchor="middle" fill="#ffb74d" font-family="Arial, sans-serif" font-size="10">CONTAINER</text>
+</svg>

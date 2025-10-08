@@ -1,0 +1,64 @@
+<svg width="800" height="640" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="drumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="capGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#495057;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#343a40;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="bodyShine" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="640" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Drum shadow -->
+  <ellipse cx="405" cy="580" rx="140" ry="30" fill="#000000" opacity="0.15"/>
+  
+  <!-- Main drum body -->
+  <rect x="260" y="180" width="280" height="320" fill="url(#drumGradient)" rx="20"/>
+  
+  <!-- Body shine effect -->
+  <ellipse cx="320" cy="240" rx="80" ry="120" fill="url(#bodyShine)"/>
+  
+  <!-- Narrow mouth/neck -->
+  <rect x="340" y="140" width="120" height="60" fill="url(#drumGradient)" rx="10"/>
+  
+  <!-- Cap/lid -->
+  <ellipse cx="400" cy="140" rx="70" ry="20" fill="url(#capGradient)"/>
+  <ellipse cx="400" cy="130" rx="60" ry="15" fill="#6c757d"/>
+  <circle cx="400" cy="125" r="8" fill="#495057"/>
+  
+  <!-- Handles -->
+  <rect x="230" y="280" width="20" height="80" fill="url(#capGradient)" rx="10"/>
+  <rect x="550" y="280" width="20" height="80" fill="url(#capGradient)" rx="10"/>
+  
+  <!-- Handle details -->
+  <rect x="235" y="290" width="10" height="60" fill="#6c757d" rx="5"/>
+  <rect x="555" y="290" width="10" height="60" fill="#6c757d" rx="5"/>
+  
+  <!-- Label area -->
+  <rect x="300" y="250" width="200" height="140" fill="#ffffff" opacity="0.9" rx="8"/>
+  <rect x="305" y="255" width="190" height="130" fill="#f8f9fa" rx="6" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Brand text -->
+  <text x="400" y="290" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="24" font-weight="bold">MAUSER JERRY CAN</text>
+  <text x="400" y="320" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="16">NARROW MOUTH CONTAINER</text>
+  <text x="400" y="345" text-anchor="middle" fill="#868e96" font-family="Arial, sans-serif" font-size="12">HDPE MATERIAL</text>
+  
+  <!-- Specifications -->
+  <circle cx="320" cy="520" r="3" fill="#495057"/>
+  <text x="330" y="525" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">35L CAPACITY</text>
+  
+  <circle cx="320" cy="540" r="3" fill="#495057"/>
+  <text x="330" y="545" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">CHEMICAL RESISTANT</text>
+  
+  <circle cx="320" cy="560" r="3" fill="#495057"/>
+  <text x="330" y="565" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">LEAK PROOF DESIGN</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg width="560" height="320" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glossyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e9ecef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dee2e6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rimGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c757d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#495057;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glossyShine" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="560" height="320" fill="#ffffff" opacity="0.05"/>
+  
+  <!-- Drum shadow -->
+  <ellipse cx="285" cy="285" rx="120" ry="25" fill="#000000" opacity="0.1"/>
+  
+  <!-- Drum body -->
+  <rect x="160" y="120" width="240" height="160" fill="url(#glossyGradient)" rx="8"/>
+  
+  <!-- Glossy shine effect -->
+  <ellipse cx="220" cy="160" rx="60" ry="80" fill="url(#glossyShine)"/>
+  
+  <!-- Top rim (open mouth) -->
+  <ellipse cx="280" cy="120" rx="120" ry="25" fill="url(#rimGradient)"/>
+  <ellipse cx="280" cy="115" rx="115" ry="20" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Handle -->
+  <rect x="140" y="180" width="15" height="60" fill="url(#rimGradient)" rx="7"/>
+  <rect x="405" y="180" width="15" height="60" fill="url(#rimGradient)" rx="7"/>
+  
+  <!-- Glossy reflection lines -->
+  <line x1="180" y1="140" x2="180" y2="260" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="140" x2="200" y2="260" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Brand text -->
+  <text x="280" y="200" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="16" font-weight="bold">GLOSSY</text>
+  <text x="280" y="220" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">DRUM</text>
+</svg>
