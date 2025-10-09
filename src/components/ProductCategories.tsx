@@ -885,7 +885,7 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
           {canScrollLeft && (
             <motion.button
               onClick={() => scroll("left")}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/40 transition-colors"
+              className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/40 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Scroll left"
@@ -1485,7 +1485,7 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
           {canScrollRight && (
             <motion.button
               onClick={() => scroll("right")}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/40 transition-colors"
+              className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/40 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Scroll right"

@@ -11,6 +11,20 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'dist',
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-router': ['react-router-dom'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-icons': ['lucide-react'],
+          'vendor-query': ['@tanstack/react-query'],
+          'vendor-toast': ['sonner']
+        }
+      }
+    }
   },
   plugins: [
     react(),
