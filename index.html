@@ -11,19 +11,24 @@
     <meta name="keywords" content="plastic container, plastic drum, packaging solution, industrial packaging, plastic storage solutions, wholesale plastic containers India" />
     <meta name="author" content="GP - GoodWill Plast" />
     <meta name="keywords" content="GP, GoodWill Plast, HDPE drums, plastic containers, industrial jars, B2B packaging, chemical storage, food grade containers" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
 
     <meta property="og:title" content="GoodWill Plast | Premium HDPE Containers & Drums" />
     <meta property="og:description" content="Wholesale plastic containers and industrial packaging solutions in India. Premium HDPE drums, jars, and plastic storage solutions for B2B." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/src/assets/logo(1).png" />
+    <meta property="og:image" content="/favicon.png" />
     <meta property="og:url" content="https://goodwillplast.com/" />
     <meta property="og:site_name" content="GoodWill Plast" />
+    <meta property="og:image:alt" content="GoodWill Plast HDPE containers and drums" />
+    <meta property="og:locale" content="en_IN" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@gpgoodwillplast" />
     <meta name="twitter:title" content="GoodWill Plast | Premium HDPE Containers" />
     <meta name="twitter:description" content="Wholesale plastic containers and industrial packaging solutions in India." />
-    <meta name="twitter:image" content="/src/assets/logo(1).png" />
+    <meta name="twitter:image" content="/favicon.png" />
+    <meta name="twitter:image:alt" content="GoodWill Plast HDPE containers and drums" />
     <link rel="alternate" href="https://goodwillplast.com/" hreflang="en" />
 
     <script type="application/ld+json">
@@ -39,7 +44,74 @@
       "description": "Wholesale plastic containers and industrial packaging solutions in India. Premium HDPE drums, jars, and plastic storage solutions for B2B."
     }
     </script>
-    
+
+    <!-- Google Analytics (GA4) - conditional load via VITE_GA_ID -->
+    <script>
+      (function() {
+        var GA_ID = '%VITE_GA_ID%';
+        var hasId = GA_ID && GA_ID !== '' && GA_ID !== '%VITE_GA_ID%' && GA_ID.startsWith('G-');
+        if (!hasId) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      })();
+    </script>
+
+    <!-- Product Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "50 Litre Plastic Drum",
+      "image": "https://goodwillplast.com/dummy-product.svg",
+      "description": "Leak-proof, durable 50L plastic drum for industrial use.",
+      "brand": "GoodwillPlast",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://goodwillplast.com/#product-categories",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Rocket Drum 50L",
+      "image": "https://goodwillplast.com/dummy-product.svg",
+      "description": "50L rocket drum suitable for industrial liquids and chemicals.",
+      "brand": "GoodwillPlast",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://goodwillplast.com/#product-categories",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Jerry Can 20L",
+      "image": "https://goodwillplast.com/dummy-product.svg",
+      "description": "Durable 20L jerry can for storage and transport.",
+      "brand": "GoodwillPlast",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://goodwillplast.com/#product-categories",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+  
   <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-new.svg">
   <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon-new.svg">
   <link rel="icon" type="image/svg+xml" sizes="48x48" href="/favicon-new.svg">

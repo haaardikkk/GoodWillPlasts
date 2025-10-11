@@ -86,22 +86,15 @@ const Hero = () => {
                 <span className="text-sm font-medium">B2B HDPE SOLUTIONS</span>
               </motion.div>
               <motion.h1 
-                className="text-5xl lg:text-7xl font-bold leading-tight"
+                className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.2 }}
               >
-                Premium 
-                <motion.span 
-                  className="bg-gradient-primary bg-clip-text text-transparent"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 1.5 }}
-                > HDPE</motion.span>
-                <br />Containers
+                Premium <motion.span className="text-primary inline-block">HDPE</motion.span> Containers
               </motion.h1>
               <motion.p 
-                className="text-xl text-muted-foreground max-w-lg"
+                className="text-base sm:text-xl text-muted-foreground max-w-lg"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
@@ -112,7 +105,7 @@ const Hero = () => {
 
             {/* Stats */}
             <motion.div 
-              className="grid grid-cols-3 gap-6"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}

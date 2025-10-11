@@ -860,6 +860,14 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
   return (
     <section id="product-categories" className="py-24 bg-surface-dark relative">
       <div className="container mx-auto px-4 relative">
+        <div className="px-4 md:px-[5%] mb-6">
+          <h2 className="text-3xl font-bold text-foreground">
+            Premium Plastic Drums, Containers & Industrial Packaging
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground max-w-2xl">
+            HDPE drum supplier, plastic container wholesale, industrial plastic barrels, and B2B packaging solutions in India.
+          </p>
+        </div>
         {/* Filter Bar */}
         <div className="mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 px-4 md:px-[5%]">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -924,10 +932,12 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                         <div className="relative h-40 overflow-hidden rounded-t-xl">
                           <motion.img
                             src={category.image}
-                            alt={category.title}
-                            className="w-full h-full object-contain transform-gpu" /* Using object-contain to prevent cutting */
-                            whileHover={{ scale: 1.15 }} /* Moderate zoom on hover */
+                            alt={`${category.title} — HDPE plastic product`}
+                            className="w-full h-full object-contain transform-gpu"
+                            whileHover={{ scale: 1.15 }}
                             transition={{ duration: 0.5 }}
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
                         </div>

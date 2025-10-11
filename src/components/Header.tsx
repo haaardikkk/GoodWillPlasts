@@ -36,12 +36,12 @@ const Header = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <motion.div 
-              className="w-20 h-20 rounded-lg flex items-center justify-center shadow-lg"
+              className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center shadow-lg"
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <img src={headLogo} alt="GoodWill Plast" className="w-full h-full object-contain" />
+              <img src={headLogo} alt="GoodWill Plast company logo" className="w-full h-full object-contain" loading="lazy" decoding="async" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -49,7 +49,7 @@ const Header = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h1 className="text-xl font-bold text-foreground">GoodWill Plast</h1>
-              <p className="text-xs text-muted-foreground">HDPE Solutions</p>
+              <p className="text-xs text-muted-foreground">HDPE Solutions <a href="/resources" className="sr-only">Resources</a></p>
             </motion.div>
           </motion.div>
 
