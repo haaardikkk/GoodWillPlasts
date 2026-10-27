@@ -9,7 +9,7 @@ const NotFound = () => {
     applySEO({
       title: "Page not found | GoodWill Plast",
       description: "The page you are looking for does not exist.",
-      canonicalUrl: "https://goodwillplast.com/",
+      canonicalUrl: "https://www.goodwillplast.in/",
       robots: "noindex, follow",
     });
     console.error(

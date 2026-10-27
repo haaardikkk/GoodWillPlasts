@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://goodwillplast.com/sitemap.xml
+Sitemap: https://www.goodwillplast.in/sitemap.xml

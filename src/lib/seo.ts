@@ -6,7 +6,7 @@ type SEOParams = {
   robots?: string;
 };
 
-const DEFAULT_OG_IMAGE = "https://goodwillplast.com/og-image.jpg";
+const DEFAULT_OG_IMAGE = "https://www.goodwillplast.in/og-image.jpg";
 
 // Per-route overrides for the defaults in index.html.
 export function applySEO({

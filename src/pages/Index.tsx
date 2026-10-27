@@ -15,7 +15,7 @@ const Index = () => {
       title: "HDPE Drums, Jerry Cans & PET Jars Manufacturer in India | GoodWill Plast",
       description:
         "GoodWill Plast manufactures HDPE drums, jerry cans, edible oil cans and PET jars in Sonepat, Haryana. 5L to 50L, multiple colours, bulk B2B supply across India.",
-      canonicalUrl: "https://goodwillplast.com/",
+      canonicalUrl: "https://www.goodwillplast.in/",
     });
   }, []);
 

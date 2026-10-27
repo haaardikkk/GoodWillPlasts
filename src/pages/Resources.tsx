@@ -9,7 +9,7 @@ const Resources = () => {
       title: "HDPE Drum & Container Buying Guides | GoodWill Plast",
       description:
         "Guides on choosing plastic drums, HDPE containers and industrial packaging for B2B buyers in India, from GoodWill Plast, Sonepat.",
-      canonicalUrl: "https://goodwillplast.com/resources",
+      canonicalUrl: "https://www.goodwillplast.in/resources",
     });
   }, []);
 

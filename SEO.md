@@ -19,7 +19,7 @@
 ## Production domain
 
 Set `VITE_SITE_URL` in the Vercel project's environment variables if the live domain is not
-`https://goodwillplast.com` (e.g. `https://www.goodwillplast.com` or a `.in` domain). It controls canonical
+`https://www.goodwillplast.in` (e.g. `https://www.www.goodwillplast.in` or a `.in` domain). It controls canonical
 URLs, OG URLs, JSON-LD, the sitemap and robots.txt. Redeploy after changing it. Point any other domains
 at the primary one with a 301 redirect in Vercel → Domains.
 
