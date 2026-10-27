@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import headLogo from "@/assets/head_logo.png";
+import headLogo from "@/assets/head-logo.webp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,15 +41,15 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <img src={headLogo} alt="GoodWill Plast company logo" className="w-full h-full object-contain" loading="lazy" decoding="async" />
+              <img src={headLogo} alt="GoodWill Plast company logo" className="w-full h-full object-contain" decoding="async" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h1 className="text-xl font-bold text-foreground">GoodWill Plast</h1>
-              <p className="text-xs text-muted-foreground">HDPE Solutions <a href="/resources" className="sr-only">Resources</a></p>
+              <span className="block text-xl font-bold text-foreground">GoodWill Plast</span>
+              <p className="text-xs text-muted-foreground">HDPE Solutions</p>
             </motion.div>
           </motion.div>
 
@@ -106,7 +106,7 @@ const Header = () => {
           <AnimatePresence>
             {mobileMenuOpen && (
               <motion.div 
-                className="absolute top-16 left-0 w-full bg-background border-b border-border py-4 px-6 shadow-lg z-50"
+                className="absolute top-20 left-0 w-full bg-background border-b border-border py-4 px-6 shadow-lg z-50"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -114,7 +114,7 @@ const Header = () => {
               >
                 {[
                   { href: "#home", label: "Home" },
-                  { href: "#products", label: "Products" },
+                  { href: "#product-categories", label: "Products" },
                   { href: "#about", label: "About" },
                   { href: "#contact", label: "Contact" }
                 ].map((item, index) => (
@@ -162,9 +162,10 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              aria-label="Toggle mobile menu"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
-              <Menu size={24} />
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
           </motion.div>
 
@@ -179,7 +180,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button variant="default" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+              <Button asChild variant="default" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
                 <a href="tel:+919811347037">Get Quote</a>
               </Button>
             </motion.div>

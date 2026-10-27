@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GoodWill Plast – AI image &amp; video prompts — GoodWill Plast</title>
+<style>
+  :root {
+    --bg: #0b1220; --card: #121b2e; --border: #23304a; --text: #e8eef7; --muted: #93a1b8;
+    --accent: #00bfff; --code: #0e1626;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.65 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  header { padding: 48px 20px 36px; border-bottom: 1px solid var(--border);
+    background: radial-gradient(ellipse 70% 120% at 80% 0%, rgba(0,191,255,.18), transparent 70%); }
+  header .inner, main { max-width: 860px; margin: 0 auto; }
+  header p.kicker { margin: 0; color: var(--accent); font-size: 12px; font-weight: 700;
+    letter-spacing: .18em; text-transform: uppercase; }
+  header h1 { margin: 10px 0 8px; font-size: 34px; line-height: 1.15; }
+  header p.sub { margin: 0; color: var(--muted); }
+  main { padding: 8px 20px 80px; }
+  main > h1:first-child { display: none; }
+  h2 { margin: 48px 0 12px; font-size: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+  h3 { margin: 32px 0 10px; font-size: 18px; color: #fff; }
+  p, li { color: #cfd8e6; }
+  strong { color: #fff; }
+  a { color: var(--accent); }
+  hr { border: 0; }
+  code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 13px; background: var(--code);
+    border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; color: #bfe9ff; }
+  blockquote { margin: 16px 0; padding: 12px 16px; border-left: 3px solid var(--accent);
+    background: rgba(0,191,255,.07); border-radius: 0 8px 8px 0; }
+  blockquote p { margin: 0; }
+  .prompt { margin: 14px 0 18px; border: 1px solid var(--border); border-radius: 12px;
+    background: var(--code); overflow: hidden; break-inside: avoid; }
+  .prompt-bar { display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 10px 8px 14px; border-bottom: 1px solid var(--border); background: var(--card);
+    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .copy { border: 1px solid var(--border); background: #1a2640; color: var(--text); border-radius: 8px;
+    padding: 6px 14px; font: 600 13px "Segoe UI", sans-serif; cursor: pointer; transition: .15s; }
+  .copy:hover { border-color: var(--accent); color: var(--accent); }
+  .copy.done { background: var(--accent); border-color: var(--accent); color: #04121c; }
+  .prompt pre { margin: 0; padding: 14px 16px; white-space: pre-wrap; word-break: break-word; }
+  .prompt pre code { border: 0; background: none; padding: 0; color: #dbe7f5; font-size: 13.5px; line-height: 1.6; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; margin: 14px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--card); color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+  tr:last-child td { border-bottom: 0; }
+  td code { white-space: nowrap; }
+  @media print {
+    :root { --bg: #fff; --card: #f2f5f9; --border: #d5dde8; --text: #0b1220; --muted: #4b5b73; --code: #f7f9fc; }
+    body { font-size: 11pt; }
+    header { background: none; padding: 0 0 16px; }
+    p, li, strong, h3 { color: #111 !important; }
+    code, .prompt pre code { color: #0b1220 !important; }
+    .copy { display: none; }
+    h2 { break-before: auto; }
+    @page { margin: 16mm 14mm; }
+  }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <p class="kicker">GoodWill Plast</p>
+  <h1>AI image &amp; video prompts — GoodWill Plast</h1>
+  <p class="sub">Click <strong>Copy</strong> on any prompt.</p>
+</div></header>
+<main>
+<h1>AI image &amp; video prompts — GoodWill Plast</h1>
+<p>Use these to replace the low-resolution product photos and to make a 3D-style hero.
+Generate the images in <strong>ChatGPT</strong> first, then make the hero video in <strong>Google Flow</strong> using
+those images.</p>
+<p><strong>Golden rule:</strong> always attach the real product photo as a reference. The products must look
+like what you actually sell: same shape, handles, caps, ribs and colour. If ChatGPT changes the
+design, regenerate. Don't publish an image that misrepresents a product.</p>
+<hr />
+<h2>Part 1 — ChatGPT images</h2>
+<h3>Step 0: paste this once at the start of the chat</h3>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p1">Copy</button></div><pre id="p1"><code>You are a product photographer and 3D product-visualisation artist for GoodWill Plast, an
+Indian manufacturer of HDPE drums, jerry cans and PET jars. For every image in this chat:
+
+- Recreate the EXACT product in the reference photo I attach: same silhouette, proportions,
+  handles, lid, cap, ribs, neck, mouth and colour. Do not redesign, add or remove features.
+- Photorealistic studio render, ultra-sharp, high detail, realistic HDPE plastic: semi-matte,
+  slight sheen, subtle moulding lines, crisp edges.
+- Lighting: soft large key light from upper left, cool cyan rim light (#00BFFF) from behind
+  right, gentle fill. Soft realistic contact shadow under the product.
+- Camera: 3/4 view, slightly above eye level (about 15°), 85mm lens look, no distortion.
+- No text, no logos, no labels, no watermarks, no hands, no props unless I ask.
+- Keep lighting, camera angle and style identical across every image so they match as a set.
+</code></pre></div>
+<h3>Step 1: individual product cutouts (transparent background)</h3>
+<p>These are for the 3D layered hero, product cards and product pages. Generate <strong>one per
+message</strong>, attaching the reference file listed. Use <strong>square 1:1</strong>.</p>
+<p>Prompt template (swap in the product line from the table):</p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p2">Copy</button></div><pre id="p2"><code>Using the attached reference photo, create a single [PRODUCT DESCRIPTION] as an isolated
+product cutout on a fully TRANSPARENT background (PNG). Centered, the product fills about 80%
+of the frame height, with a soft contact shadow directly beneath it. Square 1:1. Follow all the
+style rules from earlier exactly.
+</code></pre></div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Save as</th>
+<th>Attach reference</th>
+<th>[PRODUCT DESCRIPTION]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open-mouth-drum.png</code></td>
+<td><code>src/assets/Products/open_top/open_mouth_drum.png</code></td>
+<td>blue 50L HDPE open mouth drum with clamp ring lid and two side handles</td>
+</tr>
+<tr>
+<td><code>rocket-drum.png</code></td>
+<td><code>src/assets/Products/Rocket Drum/rocket_yellow.png</code></td>
+<td>yellow 50L HDPE narrow-mouth rocket drum</td>
+</tr>
+<tr>
+<td><code>taper-drum.png</code></td>
+<td><code>src/assets/Products/Taper_drum/blue_water_taper.png</code></td>
+<td>blue 50L HDPE tapered drum with lid</td>
+</tr>
+<tr>
+<td><code>double-layered-drum.png</code></td>
+<td><code>src/assets/Products/Double_layer/double_mouth_red.png</code></td>
+<td>red 50L HDPE double-layered drum with threaded cap</td>
+</tr>
+<tr>
+<td><code>glossy-open-mouth-drum.png</code></td>
+<td><code>src/assets/Products/open_top_glossy/glossy_orange.png</code></td>
+<td>orange 35L high-gloss HDPE open mouth drum with a mirror-like glossy finish</td>
+</tr>
+<tr>
+<td><code>mauser-jerry-can.png</code></td>
+<td><code>src/assets/Products/mauser jerry/mauser_jerry_blue.png</code></td>
+<td>blue 35L HDPE Mauser-style jerry can with narrow neck and screw cap</td>
+</tr>
+<tr>
+<td><code>jerry-can.png</code></td>
+<td><code>src/assets/Products/Jerry_can/white_jerry_can.png</code></td>
+<td>white 20L HDPE jerry can with integrated handle and pouring spout</td>
+</tr>
+<tr>
+<td><code>edible-oil-can.png</code></td>
+<td><code>src/assets/Products/edible/narrow_mouth_yellow.png</code></td>
+<td>yellow 5L HDPE narrow-mouth edible oil can with integrated handle</td>
+</tr>
+<tr>
+<td><code>deluxe-can.png</code></td>
+<td><code>src/assets/Products/delux_can/delux_can_white.png</code></td>
+<td>white 35L HDPE deluxe can with dispensing spout</td>
+</tr>
+<tr>
+<td><code>sauce-can.png</code></td>
+<td><code>src/assets/Products/sauce_can/phenyl_green.png</code></td>
+<td>green 5L HDPE sauce / phenyl can with dispensing spout</td>
+</tr>
+<tr>
+<td><code>pet-jar-and-preform.png</code></td>
+<td><code>src/assets/Products/jar_preform/jar_and_preforms.png</code></td>
+<td>group of crystal-clear transparent PET jars with caps in several sizes next to PET preforms, realistic clear plastic with refraction</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Ready-to-paste product prompts</h4>
+<p>Attach the reference file, paste the prompt, save the result with the name shown.</p>
+<p><strong>1. open-mouth-drum.png</strong>: attach <code>src/assets/Products/open_top/open_mouth_drum.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p3">Copy</button></div><pre id="p3"><code>Using the attached reference photo, create a single blue 50L HDPE open mouth drum with clamp ring lid and two side handles as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>2. rocket-drum.png</strong>: attach <code>src/assets/Products/Rocket Drum/rocket_yellow.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p4">Copy</button></div><pre id="p4"><code>Using the attached reference photo, create a single yellow 50L HDPE narrow-mouth rocket drum as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>3. taper-drum.png</strong>: attach <code>src/assets/Products/Taper_drum/blue_water_taper.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p5">Copy</button></div><pre id="p5"><code>Using the attached reference photo, create a single blue 50L HDPE tapered drum with lid as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>4. double-layered-drum.png</strong>: attach <code>src/assets/Products/Double_layer/double_mouth_red.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p6">Copy</button></div><pre id="p6"><code>Using the attached reference photo, create a single red 50L HDPE double-layered drum with threaded cap as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>5. glossy-open-mouth-drum.png</strong>: attach <code>src/assets/Products/open_top_glossy/glossy_orange.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p7">Copy</button></div><pre id="p7"><code>Using the attached reference photo, create a single orange 35L high-gloss HDPE open mouth drum with a mirror-like glossy finish as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>6. mauser-jerry-can.png</strong>: attach <code>src/assets/Products/mauser jerry/mauser_jerry_blue.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p8">Copy</button></div><pre id="p8"><code>Using the attached reference photo, create a single blue 35L HDPE Mauser-style jerry can with narrow neck and screw cap as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>7. jerry-can.png</strong>: attach <code>src/assets/Products/Jerry_can/white_jerry_can.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p9">Copy</button></div><pre id="p9"><code>Using the attached reference photo, create a single white 20L HDPE jerry can with integrated handle and pouring spout as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>8. edible-oil-can.png</strong>: attach <code>src/assets/Products/edible/narrow_mouth_yellow.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p10">Copy</button></div><pre id="p10"><code>Using the attached reference photo, create a single yellow 5L HDPE narrow-mouth edible oil can with integrated handle as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>9. deluxe-can.png</strong>: attach <code>src/assets/Products/delux_can/delux_can_white.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p11">Copy</button></div><pre id="p11"><code>Using the attached reference photo, create a single white 35L HDPE deluxe can with dispensing spout as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>10. sauce-can.png</strong>: attach <code>src/assets/Products/sauce_can/phenyl_green.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p12">Copy</button></div><pre id="p12"><code>Using the attached reference photo, create a single green 5L HDPE sauce / phenyl can with dispensing spout as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>11. pet-jar-and-preform.png</strong>: attach <code>src/assets/Products/jar_preform/jar_and_preforms.png</code></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p13">Copy</button></div><pre id="p13"><code>Using the attached reference photo, create a single group of crystal-clear transparent PET jars with caps in several sizes next to PET preforms, realistic clear plastic with refraction as an isolated product cutout on a
+fully TRANSPARENT background (PNG). Centered, the product fills about 80% of the frame height,
+with a soft contact shadow directly beneath it. Square 1:1. Follow all the style rules from
+earlier exactly.
+</code></pre></div>
+<p><strong>Want every colour as well?</strong> Reply after each product with this (change the colour), and save
+as e.g. <code>open-mouth-drum-green.png</code>:</p>
+<div class="prompt"><div class="prompt-bar"><span>Text</span><button type="button" class="copy" data-target="p14">Copy</button></div><pre id="p14"><code>Same image, same angle, lighting and background, but the product in GREEN. Keep the design identical.
+</code></pre></div>
+<h3>Step 2: hero 3D composition (desktop, 16:9)</h3>
+<p>Attach <strong>all</strong> the cutouts from Step 1 (or at least: open mouth drum, rocket drum, mauser jerry
+can, jerry can, edible oil can, PET jar).</p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p15">Copy</button></div><pre id="p15"><code>Create a premium 3D product hero scene for an industrial packaging manufacturer, using the
+EXACT products from the attached images without changing their design.
+
+Composition: an elegant, asymmetric arrangement on three or four floating matte dark-navy
+geometric plinths at different heights (cylinders and rounded blocks), forming a gentle
+staircase from left to right. The blue open mouth drum is the hero on the tallest plinth at the
+right; the yellow rocket drum and the blue Mauser jerry can stand slightly behind it; the white
+jerry can and the yellow edible oil can sit in front on lower plinths; the clear PET jars sit
+at the front edge catching the light. Products are spaced so each one is clearly readable,
+with depth and overlap.
+
+Environment: deep navy-black studio (#0B1220) fading to near black, a subtle cyan (#00BFFF)
+glow behind the arrangement, a faint reflective floor with soft reflections, very light
+atmospheric haze for depth. Cinematic, minimal, premium, like an Apple product launch but
+industrial.
+
+Leave the LEFT 45% of the frame as clean dark negative space for a headline.
+Landscape 16:9 (1536x1024). Photorealistic, ultra-sharp, no text, no logos, no watermark.
+</code></pre></div>
+<p>Save as <code>hero-3d-desktop.png</code>.</p>
+<h3>Step 3: hero 3D composition (mobile, portrait)</h3>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p16">Copy</button></div><pre id="p16"><code>Same scene, same products, same lighting and style as the previous image, recomposed for a
+phone screen: portrait 2:3 (1024x1536). Products arranged in a tighter stacked pyramid in the
+LOWER 60% of the frame; the TOP 40% is clean dark negative space for a headline.
+</code></pre></div>
+<p>Save as <code>hero-3d-mobile.png</code>.</p>
+<h3>Step 4: end frame for the video (camera moved)</h3>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p17">Copy</button></div><pre id="p17"><code>Recreate the exact same desktop hero scene (same products, plinths, lighting and colours), but
+as if the camera has slowly orbited about 20 degrees to the right and pushed in slightly. The
+products, their positions and their design must stay identical; only the camera viewpoint
+changes. Landscape 16:9 (1536x1024), no text.
+</code></pre></div>
+<p>Save as <code>hero-3d-desktop-end.png</code>.</p>
+<h3>Step 5 (optional): featured close-ups</h3>
+<p>For the three featured products (open mouth drum, Mauser jerry can, edible oil can):</p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p18">Copy</button></div><pre id="p18"><code>Using the attached product, create a dramatic close-up beauty shot: the product on a single
+dark navy plinth, low camera angle, strong cyan rim light outlining the silhouette, soft
+reflections on a dark glossy floor, deep navy background. Square 1:1. Product design unchanged,
+no text.
+</code></pre></div>
+<p>Save as <code>featured-open-mouth-drum.png</code>, <code>featured-mauser-jerry-can.png</code>,
+<code>featured-edible-oil-can.png</code>.</p>
+<hr />
+<h2>Part 2 — Google Flow (hero video)</h2>
+<p>Do this after Part 1. In Flow, start a new project and pick <strong>Frames to Video</strong>.</p>
+<ul>
+<li><strong>Start frame:</strong> <code>hero-3d-desktop.png</code></li>
+<li><strong>End frame:</strong> <code>hero-3d-desktop-end.png</code></li>
+<li><strong>Aspect ratio:</strong> 16:9 · <strong>Length:</strong> 8 seconds · best-quality model</li>
+</ul>
+<p><strong>Prompt:</strong></p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p19">Copy</button></div><pre id="p19"><code>Slow, smooth cinematic camera orbit around a premium arrangement of industrial plastic
+packaging products (HDPE drums, jerry cans, cans and clear PET jars) standing on floating dark
+navy plinths in a dark studio. The camera glides gently to the right and pushes in slightly,
+revealing depth between the products. A soft cyan rim light sweeps slowly across the plastic
+surfaces, creating moving highlights and reflections on the glossy floor. Very subtle drifting
+haze and tiny dust particles in the light. The products stay completely still and keep their
+exact shape, colour and design: no morphing, no melting, no new objects, no people, no text.
+Calm, elegant, premium, steady motion, like a high-end product launch film.
+</code></pre></div>
+<p><strong>Negative / avoid</strong> (paste in the negative prompt field if you have one, or add to the end):</p>
+<div class="prompt"><div class="prompt-bar"><span>Text</span><button type="button" class="copy" data-target="p20">Copy</button></div><pre id="p20"><code>warping, morphing products, changing shapes, extra objects, text, logos, watermark, people,
+hands, fast camera moves, shaky camera, flicker, cartoon look
+</code></pre></div>
+<h3>Making it loop seamlessly</h3>
+<p>Generate a second 8-second clip with <strong>start frame = <code>hero-3d-desktop-end.png</code></strong> and
+<strong>end frame = <code>hero-3d-desktop.png</code></strong>, using the same prompt but "glides gently back to the
+left". Join clip 1 + clip 2 in Flow's scene builder and the video loops cleanly.</p>
+<h3>Mobile version (optional)</h3>
+<p>Repeat with <code>hero-3d-mobile.png</code> as the start frame, aspect ratio <strong>9:16</strong>, and the same
+prompt with "slow upward crane movement" instead of "orbit to the right".</p>
+<p>Export at <strong>1080p MP4</strong>.</p>
+<hr />
+<h2>Where to put the files</h2>
+<p>Put everything in <code>src/assets/generated/</code> with the filenames above, for example:</p>
+<div class="prompt"><div class="prompt-bar"><span>Prompt</span><button type="button" class="copy" data-target="p21">Copy</button></div><pre id="p21"><code>src/assets/generated/
+  hero-3d-desktop.png
+  hero-3d-mobile.png
+  hero-3d-desktop-end.png
+  hero-loop.mp4            (Flow video, desktop)
+  hero-loop-mobile.mp4     (optional)
+  open-mouth-drum.png
+  rocket-drum.png
+  ... (one per product, plus any colour variants)
+</code></pre></div>
+<p>Then ask Claude to wire them in. The plan:</p>
+<ul>
+<li><strong>Hero:</strong> the desktop/mobile 3D still loads instantly as the poster (and is the LCP image).
+  The Flow loop fades in on top once the page has loaded (skipped on Save-Data and
+  reduced-motion). The transparent cutouts float as separate layers with mouse-tilt and scroll
+  parallax for a real 3D feel.</li>
+<li><strong>Product cards &amp; pages:</strong> the new cutouts replace the current low-resolution photos,
+  converted to WebP with responsive sizes so they stay sharp on retina screens without slowing
+  the site.</li>
+</ul>
+</main>
+<script>
+  document.querySelectorAll('.copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = document.getElementById(btn.dataset.target).innerText.trim();
+      try { await navigator.clipboard.writeText(text); }
+      catch {
+        const ta = Object.assign(document.createElement('textarea'), { value: text });
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      }
+      btn.textContent = 'Copied ✓'; btn.classList.add('done');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1600);
+    });
+  });
+</script>
+</body>
+</html>

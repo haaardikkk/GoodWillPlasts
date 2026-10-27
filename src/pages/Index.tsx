@@ -12,20 +12,10 @@ const Footer = lazy(() => import("@/components/Footer"));
 const Index = () => {
   useEffect(() => {
     applySEO({
-      title: "GoodWill Plast | Premium HDPE Containers & Drums",
+      title: "HDPE Drums, Jerry Cans & PET Jars Manufacturer in India | GoodWill Plast",
       description:
-        "Wholesale plastic containers and industrial packaging solutions in India. Premium HDPE drums, jars, and storage solutions for B2B.",
-      keywords: [
-        "plastic container",
-        "plastic drum",
-        "packaging solution",
-        "industrial packaging",
-        "plastic storage solutions",
-        "wholesale plastic containers India",
-      ],
+        "GoodWill Plast manufactures HDPE drums, jerry cans, edible oil cans and PET jars in Sonepat, Haryana. 5L to 50L, multiple colours, bulk B2B supply across India.",
       canonicalUrl: "https://goodwillplast.com/",
-      ogImage: "/src/assets/logo(1).png",
-      ogUrl: "https://goodwillplast.com/",
     });
   }, []);
 

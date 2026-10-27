@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -10,13 +11,15 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
+  SelectGroup,
+  SelectLabel,
 } from "@/components/ui/select";
 
 const SERVICE_ID = "service_uhl9fdm";
 const USER_TEMPLATE_ID = "template_81rxop9";
 const COMPANY_TEMPLATE_ID = "template_65xkusg";
 const PUBLIC_KEY = "6XBnvcwhglewFavG5";
-const COMPANY_EMAIL = "goodwill2015@gmail.com";
+const COMPANY_EMAIL = "goodwillplast2015@gmail.com";
 const COMPANY_NAME = "GoodWill Plast";
 
 const ContactForm = () => {
@@ -163,13 +166,29 @@ const ContactForm = () => {
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <Card className="bg-card border-border">
               <CardContent className="p-6">
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <div>Phone: +91 9811347037, +91 7217679595</div>
-                  <div>Email: goodwillplast2015@gmail.com</div>
-                  <div>
-                    Address: 647,Phase-2, Barhi industrial area, Sonepat, Haryana 131101
-                  </div>
-                </div>
+                <ul className="space-y-4 text-sm">
+                  <li className="flex items-start gap-3">
+                    <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <div className="flex flex-col">
+                      <a href="tel:+919811347037" className="text-muted-foreground hover:text-primary transition-colors">+91 98113 47037</a>
+                      <a href="tel:+917217679595" className="text-muted-foreground hover:text-primary transition-colors">+91 72176 79595</a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <a href="mailto:goodwillplast2015@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">goodwillplast2015@gmail.com</a>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <a href="https://maps.app.goo.gl/6rbGfZPBKwKkZbjbA" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                      647, Phase-2, Barhi Industrial Area, Sonepat, Haryana 131101
+                    </a>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Mon – Sat, 9:00 AM – 6:00 PM</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
@@ -182,8 +201,10 @@ const ContactForm = () => {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Name *</label>
+                      <label htmlFor="cf-name" className="block text-sm font-medium mb-2">Name *</label>
                       <Input
+                        id="cf-name"
+                        autoComplete="name"
                         name="user_name"
                         type="text"
                         placeholder="Your full name"
@@ -192,8 +213,10 @@ const ContactForm = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Email *</label>
+                      <label htmlFor="cf-email" className="block text-sm font-medium mb-2">Email *</label>
                       <Input
+                        id="cf-email"
+                        autoComplete="email"
                         name="user_email"
                         type="email"
                         placeholder="your@email.com"
@@ -205,8 +228,10 @@ const ContactForm = () => {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Phone</label>
+                      <label htmlFor="cf-phone" className="block text-sm font-medium mb-2">Phone</label>
                       <Input
+                        id="cf-phone"
+                        autoComplete="tel"
                         name="user_phone"
                         type="tel"
                         placeholder="Your phone number"
@@ -214,23 +239,23 @@ const ContactForm = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Product (optional)</label>
+                      <label htmlFor="cf-product" className="block text-sm font-medium mb-2">Product (optional)</label>
                       <Select value={selectedProduct} onValueChange={(v) => setSelectedProduct(v)}>
-                        <SelectTrigger aria-label="Select product" className="w-full bg-background border-border h-11 focus:ring-2 focus:ring-primary focus:border-primary">
+                        <SelectTrigger id="cf-product" aria-label="Select product" className="w-full bg-background border-border h-11 focus:ring-2 focus:ring-primary focus:border-primary">
                           <SelectValue placeholder="Select a product" />
                         </SelectTrigger>
                         <SelectContent className="bg-popover text-popover-foreground border border-border shadow-lg">
                           {PRODUCT_GROUPS.map((group) => (
-                            <div key={group.title}>
-                              <div className="px-2 py-1 text-xs text-muted-foreground">{group.title}</div>
+                            <SelectGroup key={group.title}>
+                              <SelectLabel className="px-2 py-1 text-xs text-muted-foreground">{group.title}</SelectLabel>
                               {group.items.map((item) => {
                                 const value = `${item.name} (${item.capacity})`;
-                                const label = `${item.emoji} ${item.name} — ${item.capacity}`;
+                                const label = `${item.name} — ${item.capacity}`;
                                 return (
                                   <SelectItem key={value} value={value}>{label}</SelectItem>
                                 );
                               })}
-                            </div>
+                            </SelectGroup>
                           ))}
                         </SelectContent>
                       </Select>
@@ -240,8 +265,9 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Message *</label>
+                    <label htmlFor="cf-message" className="block text-sm font-medium mb-2">Message *</label>
                     <Textarea
+                      id="cf-message"
                       name="user_message"
                       placeholder="Tell us about your requirements, quantities, specifications, etc."
                       required
@@ -251,6 +277,7 @@ const ContactForm = () => {
 
                   {status.message && (
                     <div
+                      role={status.state === "error" ? "alert" : "status"}
                       className={`p-3 rounded-md text-sm ${
                         status.state === "error"
                           ? "bg-red-500/20 text-red-500"

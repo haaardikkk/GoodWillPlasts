@@ -414,3 +414,14 @@ All colors MUST be HSL.
     transform: translate3d(var(--mouse-x, 0), var(--mouse-y, 0), 0) scale(1.05);
   }
 }
+/* Stop slide-in animations from creating sideways scroll (iOS ignores body-only overflow). */
+html,
+body {
+  overflow-x: hidden;
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}

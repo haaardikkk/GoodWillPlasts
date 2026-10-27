@@ -1,10 +1,17 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { applySEO } from "@/lib/seo";
 
 const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
+    applySEO({
+      title: "Page not found | GoodWill Plast",
+      description: "The page you are looking for does not exist.",
+      canonicalUrl: "https://goodwillplast.com/",
+      robots: "noindex, follow",
+    });
     console.error(
       "404 Error: User attempted to access non-existent route:",
       location.pathname

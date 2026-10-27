@@ -1,13 +1,13 @@
 import { Phone, Mail, MapPin, Linkedin, Facebook, Youtube } from "lucide-react";
-import logoImage from "@/assets/logo(1).png";
-import gmailLogo from "@/assets/gmail-logo.png";
-import indiamartLogo from "@/assets/indiamart logo.png";
+import logoImage from "@/assets/logo-footer.webp";
+import gmailLogo from "@/assets/gmail-logo.webp";
+import indiamartLogo from "@/assets/indiamart-logo.webp";
 
 const Footer = () => {
   return (
     <footer className="bg-surface-darker border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -20,13 +20,13 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground text-sm">
-              Leading manufacturer of premium HDPE drums, containers, and jars for B2B applications worldwide.
+              Leading manufacturer of premium HDPE drums, containers, and jars for B2B customers across India.
             </p>
             <div className="flex flex-wrap gap-4">
                 <a href="https://www.indiamart.com/goodwill-plast/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <img src={indiamartLogo} alt="IndiaMART profile link" className="w-12 h-12 sm:w-14 sm:h-14" loading="lazy" decoding="async" />
                 </a>
-                <a href="#contact" aria-label="Go to contact form" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#contact" aria-label="Go to contact form" className="text-muted-foreground hover:text-primary transition-colors">
                   <img src={gmailLogo} alt="Contact form link" className="w-14 h-14 sm:w-16 sm:h-16" loading="lazy" decoding="async" />
                 </a>
               </div>
@@ -40,16 +40,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-primary" />
-                <div className="text-sm text-muted-foreground">
-                  <div>+91 9811347037</div>
-                  <div>+91 7217679595</div>
+              <div className="flex items-start space-x-3">
+                <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col text-sm text-muted-foreground">
+                  <a href="tel:+919811347037" className="hover:text-primary transition-colors">+91 98113 47037</a>
+                  <a href="tel:+917217679595" className="hover:text-primary transition-colors">+91 72176 79595</a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-primary" />
-                <span className="text-sm text-muted-foreground">goodwillplast2015@gmail.com</span>
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="mailto:goodwillplast2015@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors break-all">goodwillplast2015@gmail.com</a>
               </div>
               <div className="flex items-start space-x-3">
                 <a
@@ -61,8 +61,8 @@ const Footer = () => {
                 >
                   <MapPin className="w-4 h-4 text-primary mt-0.5" />
                   <span className="text-sm text-muted-foreground">
-                    647,Phase-2, Barhi industrial area<br />
-                    Sonepat,Haryana 131101
+                    647, Phase-2, Barhi Industrial Area<br />
+                    Sonepat, Haryana 131101
                   </span>
                 </a>
               </div>
@@ -73,15 +73,6 @@ const Footer = () => {
                   <div>Sun: Closed</div>
                 </div>
               </div>
-              <div className="pt-4 hidden" aria-hidden="true">
-                <iframe
-                  title="GoodWill Plast Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3435.989640033188!2d77.029!3d29.000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sGoodWill%20Plast!5e0!3m2!1sen!2sin!4v1700000000000"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-40 rounded-xl border border-border"
-                />
-              </div>
             </div>
           </div>
           {/* Social section removed per request */}
@@ -90,9 +81,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 GoodWill Plast. All rights reserved.
+            © {new Date().getFullYear()} GoodWill Plast. All rights reserved.
           </p>
-          <p className="sr-only"><a href="/resources">Resources</a></p>
+          <a href="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">Resources</a>
           {/* Policy links removed as requested */}
         </div>
       </div>

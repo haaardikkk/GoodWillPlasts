@@ -19,60 +19,60 @@ import {
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect, useMemo } from "react";
 import productsImage from "@/assets/products-collection.jpg";
-import rocketDrumImage from "@/assets/Products/Rocket Drum/rocket_white.png";
-import rocketDrumBlueImage from "@/assets/Products/Rocket Drum/rocket_blue.png";
-import rocketDrumGreenImage from "@/assets/Products/Rocket Drum/rocket_green.png";
-import rocketDrumYellowImage from "@/assets/Products/Rocket Drum/rocket_yellow.png";
-import rocketDrumRedImage from "@/assets/Products/Rocket Drum/rocket_red.png";
-import rocketDrumWhiteImage from "@/assets/Products/Rocket Drum/rocket_white.png";
-import mauserJerryBlueImage from "@/assets/Products/mauser jerry/mauser_jerry_blue.png";
-import mauserJerryGreenImage from "@/assets/Products/mauser jerry/mauser_jerry_green.png";
-import mauserJerryOrangeImage from "@/assets/Products/mauser jerry/mauser_jerry_orange.png";
-import mauserJerryRedImage from "@/assets/Products/mauser jerry/mauser_jerry_red.png";
-import mauserJerryWhiteImage from "@/assets/Products/mauser jerry/mauser_jerry_white.png";
-import openMouthDrumImage from "@/assets/Products/open_top/open_mouth_drum.png";
-import openMouthDrumGreenImage from "@/assets/Products/open_top/open_mouth_drum_green.png";
-import openMouthDrumOrangeImage from "@/assets/Products/open_top/open_mouth_drum_orange.png";
-import openMouthDrumRedImage from "@/assets/Products/open_top/open_mouth_drum_red.png";
-import openMouthDrumWhiteImage from "@/assets/Products/open_top/open_mouth_drum_white.png";
-import openMouthDrumYellowImage from "@/assets/Products/open_top/open_mouth_drum_yellow.png";
-import whiteJerryCanImage from "@/assets/Products/Jerry_can/white_jerry_can.png";
-import blueJerryCanImage from "@/assets/Products/Jerry_can/blue_jerry_can.png";
-import redJerryCanImage from "@/assets/Products/Jerry_can/red_jerry_can.png";
-import greenJerryCanImage from "@/assets/Products/Jerry_can/green_jerry_can.png";
-import yellowJerryCanImage from "@/assets/Products/Jerry_can/yellow_jerry_can.png";
-import blueWaterTaperImage from "@/assets/Products/Taper_drum/blue_water_taper.png";
-import greenWaterTaperImage from "@/assets/Products/Taper_drum/green_water_taper.png";
-import orangeWaterTaperImage from "@/assets/Products/Taper_drum/orange_water_taper.png";
-import whiteWaterTaperImage from "@/assets/Products/Taper_drum/white_water_taper.png";
-import yellowWaterTaperImage from "@/assets/Products/Taper_drum/yellow_water_taper.png";
-import doubleMouthBlueImage from "@/assets/Products/Double_layer/double_mouth_blue.png";
-import doubleMouthGreenImage from "@/assets/Products/Double_layer/double_mouth_green.png";
-import doubleMouthOrangeImage from "@/assets/Products/Double_layer/double_mouth_orange.png";
-import doubleMouthRedImage from "@/assets/Products/Double_layer/double_mouth_red.png";
-import narrowMouthGreenImage from "@/assets/Products/edible/narrow_mouth_green.png";
-import narrowMouthOrangeImage from "@/assets/Products/edible/narrow_mouth_orange.png";
-import narrowMouthPinkImage from "@/assets/Products/edible/narrow_mouth_pink.png";
-import narrowMouthRedImage from "@/assets/Products/edible/narrow_mouth_red.png";
-import narrowMouthWhiteImage from "@/assets/Products/edible/narrow_mouth_white.png";
-import narrowMouthYellowImage from "@/assets/Products/edible/narrow_mouth_yellow.png";
-import deluxCanBlueImage from "@/assets/Products/delux_can/delux_can_blue.png";
-import deluxCanWhiteImage from "@/assets/Products/delux_can/delux_can_white.png";
-import deluxCanRedImage from "@/assets/Products/delux_can/delux_can_red.png";
-import deluxCanGreenImage from "@/assets/Products/delux_can/delux_can_green.png";
-import deluxCanOrangeImage from "@/assets/Products/delux_can/delux_can_orange.png";
-import deluxCanYellowImage from "@/assets/Products/delux_can/delux_can_yellow.png";
-import glossyBlueImage from "@/assets/Products/open_top_glossy/glossy_blue.png";
-import glossyGreenImage from "@/assets/Products/open_top_glossy/glossy_green.png";
-import glossyOrangeImage from "@/assets/Products/open_top_glossy/glossy_orange.png";
-import glossyRedImage from "@/assets/Products/open_top_glossy/glossy_red.png";
-import glossyWhiteImage from "@/assets/Products/open_top_glossy/glossy_white.png";
-import glossyYellowImage from "@/assets/Products/open_top_glossy/glossy_yellow.png";
-import jarAndPreformsImage from "@/assets/Products/jar_preform/jar_and_preforms.png";
-import phenylGreenImage from "@/assets/Products/sauce_can/phenyl_green.png";
-import phenylOrangeImage from "@/assets/Products/sauce_can/phenyl_orange.png";
-import phenylPinkImage from "@/assets/Products/sauce_can/phenyl_pink.png";
-import phenylYellowImage from "@/assets/Products/sauce_can/phenyl_yellow.png";
+import rocketDrumImage from "@/assets/Products/Rocket Drum/rocket_white.webp";
+import rocketDrumBlueImage from "@/assets/Products/Rocket Drum/rocket_blue.webp";
+import rocketDrumGreenImage from "@/assets/Products/Rocket Drum/rocket_green.webp";
+import rocketDrumYellowImage from "@/assets/Products/Rocket Drum/rocket_yellow.webp";
+import rocketDrumRedImage from "@/assets/Products/Rocket Drum/rocket_red.webp";
+import rocketDrumWhiteImage from "@/assets/Products/Rocket Drum/rocket_white.webp";
+import mauserJerryBlueImage from "@/assets/Products/mauser jerry/mauser_jerry_blue.webp";
+import mauserJerryGreenImage from "@/assets/Products/mauser jerry/mauser_jerry_green.webp";
+import mauserJerryOrangeImage from "@/assets/Products/mauser jerry/mauser_jerry_orange.webp";
+import mauserJerryRedImage from "@/assets/Products/mauser jerry/mauser_jerry_red.webp";
+import mauserJerryWhiteImage from "@/assets/Products/mauser jerry/mauser_jerry_white.webp";
+import openMouthDrumImage from "@/assets/Products/open_top/open_mouth_drum.webp";
+import openMouthDrumGreenImage from "@/assets/Products/open_top/open_mouth_drum_green.webp";
+import openMouthDrumOrangeImage from "@/assets/Products/open_top/open_mouth_drum_orange.webp";
+import openMouthDrumRedImage from "@/assets/Products/open_top/open_mouth_drum_red.webp";
+import openMouthDrumWhiteImage from "@/assets/Products/open_top/open_mouth_drum_white.webp";
+import openMouthDrumYellowImage from "@/assets/Products/open_top/open_mouth_drum_yellow.webp";
+import whiteJerryCanImage from "@/assets/Products/Jerry_can/white_jerry_can.webp";
+import blueJerryCanImage from "@/assets/Products/Jerry_can/blue_jerry_can.webp";
+import redJerryCanImage from "@/assets/Products/Jerry_can/red_jerry_can.webp";
+import greenJerryCanImage from "@/assets/Products/Jerry_can/green_jerry_can.webp";
+import yellowJerryCanImage from "@/assets/Products/Jerry_can/yellow_jerry_can.webp";
+import blueWaterTaperImage from "@/assets/Products/Taper_drum/blue_water_taper.webp";
+import greenWaterTaperImage from "@/assets/Products/Taper_drum/green_water_taper.webp";
+import orangeWaterTaperImage from "@/assets/Products/Taper_drum/orange_water_taper.webp";
+import whiteWaterTaperImage from "@/assets/Products/Taper_drum/white_water_taper.webp";
+import yellowWaterTaperImage from "@/assets/Products/Taper_drum/yellow_water_taper.webp";
+import doubleMouthBlueImage from "@/assets/Products/Double_layer/double_mouth_blue.webp";
+import doubleMouthGreenImage from "@/assets/Products/Double_layer/double_mouth_green.webp";
+import doubleMouthOrangeImage from "@/assets/Products/Double_layer/double_mouth_orange.webp";
+import doubleMouthRedImage from "@/assets/Products/Double_layer/double_mouth_red.webp";
+import narrowMouthGreenImage from "@/assets/Products/edible/narrow_mouth_green.webp";
+import narrowMouthOrangeImage from "@/assets/Products/edible/narrow_mouth_orange.webp";
+import narrowMouthPinkImage from "@/assets/Products/edible/narrow_mouth_pink.webp";
+import narrowMouthRedImage from "@/assets/Products/edible/narrow_mouth_red.webp";
+import narrowMouthWhiteImage from "@/assets/Products/edible/narrow_mouth_white.webp";
+import narrowMouthYellowImage from "@/assets/Products/edible/narrow_mouth_yellow.webp";
+import deluxCanBlueImage from "@/assets/Products/delux_can/delux_can_blue.webp";
+import deluxCanWhiteImage from "@/assets/Products/delux_can/delux_can_white.webp";
+import deluxCanRedImage from "@/assets/Products/delux_can/delux_can_red.webp";
+import deluxCanGreenImage from "@/assets/Products/delux_can/delux_can_green.webp";
+import deluxCanOrangeImage from "@/assets/Products/delux_can/delux_can_orange.webp";
+import deluxCanYellowImage from "@/assets/Products/delux_can/delux_can_yellow.webp";
+import glossyBlueImage from "@/assets/Products/open_top_glossy/glossy_blue.webp";
+import glossyGreenImage from "@/assets/Products/open_top_glossy/glossy_green.webp";
+import glossyOrangeImage from "@/assets/Products/open_top_glossy/glossy_orange.webp";
+import glossyRedImage from "@/assets/Products/open_top_glossy/glossy_red.webp";
+import glossyWhiteImage from "@/assets/Products/open_top_glossy/glossy_white.webp";
+import glossyYellowImage from "@/assets/Products/open_top_glossy/glossy_yellow.webp";
+import jarAndPreformsImage from "@/assets/Products/jar_preform/jar_and_preforms.webp";
+import phenylGreenImage from "@/assets/Products/sauce_can/phenyl_green.webp";
+import phenylOrangeImage from "@/assets/Products/sauce_can/phenyl_orange.webp";
+import phenylPinkImage from "@/assets/Products/sauce_can/phenyl_pink.webp";
+import phenylYellowImage from "@/assets/Products/sauce_can/phenyl_yellow.webp";
 
 // Optimized card images
 import cardOpenMouthDrumImage from "@/assets/Products/optimized/card_open_mouth_drum.svg";
@@ -927,9 +927,9 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                   }
                 }}>
                   <DialogTrigger asChild>
-                    <motion.div className="cursor-pointer z-10">
-                      <Card className="group bg-card border border-border hover:border-primary transition-all duration-500 overflow-hidden shadow-lg hover:shadow-2xl h-full rounded-2xl relative z-10">
-                        <div className="relative h-40 overflow-hidden rounded-t-xl">
+                    <motion.div className="cursor-pointer z-10 h-full">
+                      <Card className="group bg-card border border-border hover:border-primary transition-all duration-500 overflow-hidden shadow-lg hover:shadow-2xl h-full flex flex-col rounded-2xl relative z-10">
+                        <div className="relative h-40 flex-shrink-0 overflow-hidden rounded-t-xl">
                           <motion.img
                             src={category.image}
                             alt={`${category.title} — HDPE plastic product`}
@@ -941,11 +941,11 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
                         </div>
-                        <CardContent className="p-4 flex flex-col h-full">
-                          <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-all duration-300">
+                        <CardContent className="p-4 flex flex-col flex-1">
+                          <h3 className="text-lg font-bold mb-3 min-h-[3.5rem] line-clamp-2 group-hover:text-primary transition-all duration-300">
                             {category.title}
                           </h3>
-                          <p className="text-muted-foreground mb-4 text-sm flex-grow">
+                          <p className="text-muted-foreground mb-4 text-sm line-clamp-3 min-h-[3.75rem]">
                             {category.description}
                           </p>
                           <ul className="space-y-2 mb-4">
@@ -1015,37 +1015,37 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setOpenMouthDrumColor("default")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${openMouthDrumColor === "default" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${openMouthDrumColor === "default" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setOpenMouthDrumColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 border-3 ${openMouthDrumColor === "green" ? "border-white shadow-lg ring-2 ring-emerald-300" : "border-transparent hover:border-emerald-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 border-2 ${openMouthDrumColor === "green" ? "border-white shadow-lg ring-2 ring-emerald-300" : "border-transparent hover:border-emerald-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setOpenMouthDrumColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-red-600 border-3 ${openMouthDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-red-600 border-2 ${openMouthDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Sunset Orange"
                                 title="Sunset Orange"
                               />
                               <button 
                                 onClick={() => setOpenMouthDrumColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${openMouthDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${openMouthDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setOpenMouthDrumColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${openMouthDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${openMouthDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
                               <button 
                                 onClick={() => setOpenMouthDrumColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${openMouthDrumColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${openMouthDrumColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Golden Yellow"
                                 title="Golden Yellow"
                               />
@@ -1060,31 +1060,31 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setRocketDrumColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${rocketDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${rocketDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${rocketDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${rocketDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-3 ${rocketDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 ${rocketDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Amber Orange"
                                 title="Amber Orange"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${rocketDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${rocketDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${rocketDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${rocketDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
@@ -1099,31 +1099,31 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setRocketDrumColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${rocketDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${rocketDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${rocketDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${rocketDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${rocketDrumColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${rocketDrumColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Golden Yellow"
                                 title="Golden Yellow"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${rocketDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${rocketDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setRocketDrumColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${rocketDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${rocketDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
@@ -1138,31 +1138,31 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setTaperDrumColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${taperDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${taperDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setTaperDrumColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${taperDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${taperDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setTaperDrumColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-3 ${taperDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-2 ${taperDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Sunset Orange"
                                 title="Sunset Orange"
                               />
                               <button 
                                 onClick={() => setTaperDrumColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${taperDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${taperDrumColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
                               <button 
                                 onClick={() => setTaperDrumColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${taperDrumColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${taperDrumColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Golden Yellow"
                                 title="Golden Yellow"
                               />
@@ -1177,25 +1177,25 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setDoubleMouthDrumColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${doubleMouthDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${doubleMouthDrumColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setDoubleMouthDrumColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${doubleMouthDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${doubleMouthDrumColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setDoubleMouthDrumColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-3 ${doubleMouthDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-2 ${doubleMouthDrumColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Sunset Orange"
                                 title="Sunset Orange"
                               />
                               <button 
                                 onClick={() => setDoubleMouthDrumColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${doubleMouthDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${doubleMouthDrumColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
@@ -1210,37 +1210,37 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setNarrowMouthCanColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${narrowMouthCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${narrowMouthCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setNarrowMouthCanColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-3 ${narrowMouthCanColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-2 ${narrowMouthCanColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Sunset Orange"
                                 title="Sunset Orange"
                               />
                               <button 
                                 onClick={() => setNarrowMouthCanColor("pink")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-3 ${narrowMouthCanColor === "pink" ? "border-white shadow-lg ring-2 ring-pink-300" : "border-transparent hover:border-pink-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 ${narrowMouthCanColor === "pink" ? "border-white shadow-lg ring-2 ring-pink-300" : "border-transparent hover:border-pink-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Soft Pink"
                                 title="Soft Pink"
                               />
                               <button 
                                 onClick={() => setNarrowMouthCanColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${narrowMouthCanColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${narrowMouthCanColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setNarrowMouthCanColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${narrowMouthCanColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${narrowMouthCanColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
                               <button 
                                 onClick={() => setNarrowMouthCanColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${narrowMouthCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${narrowMouthCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Golden Yellow"
                                 title="Golden Yellow"
                               />
@@ -1255,37 +1255,37 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setDeluxCanColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${deluxCanColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${deluxCanColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setDeluxCanColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${deluxCanColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${deluxCanColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
                               <button 
                                 onClick={() => setDeluxCanColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${deluxCanColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${deluxCanColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setDeluxCanColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${deluxCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${deluxCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setDeluxCanColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-3 ${deluxCanColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-2 ${deluxCanColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Vibrant Orange"
                                 title="Vibrant Orange"
                               />
                               <button 
                                 onClick={() => setDeluxCanColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${deluxCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${deluxCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Bright Yellow"
                                 title="Bright Yellow"
                               />
@@ -1300,25 +1300,25 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setPhenylCanColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${phenylCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${phenylCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setPhenylCanColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-3 ${phenylCanColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-2 ${phenylCanColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Sunset Orange"
                                 title="Sunset Orange"
                               />
                               <button 
                                 onClick={() => setPhenylCanColor("pink")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-pink-700 border-3 ${phenylCanColor === "pink" ? "border-white shadow-lg ring-2 ring-pink-300" : "border-transparent hover:border-pink-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-pink-700 border-2 ${phenylCanColor === "pink" ? "border-white shadow-lg ring-2 ring-pink-300" : "border-transparent hover:border-pink-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Rose Pink"
                                 title="Rose Pink"
                               />
                               <button 
                                 onClick={() => setPhenylCanColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${phenylCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${phenylCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Golden Yellow"
                                 title="Golden Yellow"
                               />
@@ -1333,37 +1333,37 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setGlossyOpenMouthColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${glossyOpenMouthColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${glossyOpenMouthColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setGlossyOpenMouthColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${glossyOpenMouthColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${glossyOpenMouthColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setGlossyOpenMouthColor("orange")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-3 ${glossyOpenMouthColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 border-2 ${glossyOpenMouthColor === "orange" ? "border-white shadow-lg ring-2 ring-orange-300" : "border-transparent hover:border-orange-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Sunset Orange"
                                 title="Sunset Orange"
                               />
                               <button 
                                 onClick={() => setGlossyOpenMouthColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${glossyOpenMouthColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${glossyOpenMouthColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setGlossyOpenMouthColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${glossyOpenMouthColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${glossyOpenMouthColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
                               <button 
                                 onClick={() => setGlossyOpenMouthColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${glossyOpenMouthColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${glossyOpenMouthColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Bright Yellow"
                                 title="Bright Yellow"
                               />
@@ -1378,31 +1378,31 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
                             <div className="flex flex-wrap gap-2 sm:gap-3">
                               <button 
                                 onClick={() => setJerryCanColor("blue")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 ${jerryCanColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 ${jerryCanColor === "blue" ? "border-white shadow-lg ring-2 ring-blue-300" : "border-transparent hover:border-blue-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Ocean Blue"
                                 title="Ocean Blue"
                               />
                               <button 
                                 onClick={() => setJerryCanColor("white")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-3 ${jerryCanColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-gray-50 to-gray-200 border-2 ${jerryCanColor === "white" ? "border-gray-600 shadow-lg ring-2 ring-gray-300" : "border-gray-300 hover:border-gray-400"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Pure White"
                                 title="Pure White"
                               />
                               <button 
                                 onClick={() => setJerryCanColor("red")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-3 ${jerryCanColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-red-500 to-red-700 border-2 ${jerryCanColor === "red" ? "border-white shadow-lg ring-2 ring-red-300" : "border-transparent hover:border-red-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Crimson Red"
                                 title="Crimson Red"
                               />
                               <button 
                                 onClick={() => setJerryCanColor("green")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-3 ${jerryCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 border-2 ${jerryCanColor === "green" ? "border-white shadow-lg ring-2 ring-green-300" : "border-transparent hover:border-green-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Forest Green"
                                 title="Forest Green"
                               />
                               <button 
                                 onClick={() => setJerryCanColor("yellow")} 
-                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-3 ${jerryCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 ${jerryCanColor === "yellow" ? "border-white shadow-lg ring-2 ring-yellow-300" : "border-transparent hover:border-yellow-200"} transition-all duration-300 hover:scale-110`}
                                 aria-label="Bright Yellow"
                                 title="Bright Yellow"
                               />
@@ -1505,171 +1505,24 @@ const [rocketDrumColor, setRocketDrumColor] = useState<string>("yellow");
           )}
         </div>
 
-        {/* Neon Liquid Filling Scrollbar */}
+        {/* Slim scrollbar for the product row, same look in Chrome, Edge, Safari and Firefox */}
         <style>{`
-          .hide-scrollbar::-webkit-scrollbar {
-            height: 16px;
-          }
-          .hide-scrollbar::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 25px;
-            box-shadow: 
-              inset 0 0 15px rgba(0, 0, 0, 0.5),
-              0 0 20px rgba(255, 0, 110, 0.2);
-            position: relative;
-            overflow: hidden;
-          }
-          .hide-scrollbar::-webkit-scrollbar-thumb {
-            background: linear-gradient(90deg, 
-              #ff006e 0%, 
-              #8338ec 20%, 
-              #3a86ff 40%, 
-              #06ffa5 60%, 
-              #ffbe0b 80%, 
-              #fb5607 100%);
-            background-size: 300% 100%;
-            border-radius: 25px;
-            border: none;
-            box-shadow: 
-              0 0 30px rgba(255, 0, 110, 0.8),
-              0 0 50px rgba(131, 56, 236, 0.6),
-              0 0 70px rgba(58, 134, 255, 0.4),
-              0 0 90px rgba(6, 255, 165, 0.3),
-              inset 0 2px 8px rgba(255, 255, 255, 0.3),
-              inset 0 -2px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-          }
-          .hide-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(90deg, 
-              #ff1a7a 0%, 
-              #9d4edd 20%, 
-              #4ea5ff 40%, 
-              #1affb3 60%, 
-              #ffc61f 80%, 
-              #ff6b1a 100%);
-            background-size: 300% 100%;
-            box-shadow: 
-              0 0 40px rgba(255, 0, 110, 1),
-              0 0 60px rgba(131, 56, 236, 0.8),
-              0 0 80px rgba(58, 134, 255, 0.6),
-              0 0 100px rgba(6, 255, 165, 0.4),
-              inset 0 3px 10px rgba(255, 255, 255, 0.4),
-              inset 0 -3px 10px rgba(0, 0, 0, 0.3);
-          }
-          .hide-scrollbar::-webkit-scrollbar-thumb:active {
-            box-shadow: 
-              0 0 25px rgba(255, 0, 110, 1.2),
-              0 0 45px rgba(131, 56, 236, 1),
-              0 0 65px rgba(58, 134, 255, 0.8),
-              0 0 85px rgba(6, 255, 165, 0.6),
-              inset 0 1px 6px rgba(255, 255, 255, 0.5),
-              inset 0 -1px 6px rgba(0, 0, 0, 0.4);
-          }
           .hide-scrollbar {
             scrollbar-width: thin;
-            scrollbar-color: #ff006e rgba(0, 0, 0, 0.3);
+            scrollbar-color: hsl(var(--primary) / 0.6) transparent;
           }
-          
-          /* Liquid filling animation */
-          @keyframes liquidFill {
-            0% { 
-              background-position: -100% 0%;
-              filter: hue-rotate(0deg) brightness(1.3) saturate(1.8);
-            }
-            25% { 
-              background-position: -50% 0%;
-              filter: hue-rotate(90deg) brightness(1.5) saturate(2);
-            }
-            50% { 
-              background-position: 0% 0%;
-              filter: hue-rotate(180deg) brightness(1.7) saturate(2.2);
-            }
-            75% { 
-              background-position: 50% 0%;
-              filter: hue-rotate(270deg) brightness(1.5) saturate(2);
-            }
-            100% { 
-              background-position: 100% 0%;
-              filter: hue-rotate(360deg) brightness(1.3) saturate(1.8);
-            }
+          .hide-scrollbar::-webkit-scrollbar {
+            height: 6px;
           }
-          
-          /* Pulsing glow effect */
-          @keyframes neonGlow {
-            0%, 100% { 
-              box-shadow: 
-                0 0 30px rgba(255, 0, 110, 0.8),
-                0 0 50px rgba(131, 56, 236, 0.6),
-                0 0 70px rgba(58, 134, 255, 0.4),
-                0 0 90px rgba(6, 255, 165, 0.3),
-                inset 0 2px 8px rgba(255, 255, 255, 0.3),
-                inset 0 -2px 8px rgba(0, 0, 0, 0.2);
-            }
-            50% { 
-              box-shadow: 
-                0 0 40px rgba(255, 0, 110, 1.2),
-                0 0 70px rgba(131, 56, 236, 1),
-                0 0 100px rgba(58, 134, 255, 0.8),
-                0 0 130px rgba(6, 255, 165, 0.6),
-                inset 0 3px 12px rgba(255, 255, 255, 0.4),
-                inset 0 -3px 12px rgba(0, 0, 0, 0.3);
-            }
-          }
-          
-          /* Track glow effect */
-          @keyframes trackGlow {
-            0%, 100% { 
-              box-shadow: 
-                inset 0 0 15px rgba(0, 0, 0, 0.5),
-                0 0 20px rgba(255, 0, 110, 0.2);
-            }
-            50% { 
-              box-shadow: 
-                inset 0 0 20px rgba(0, 0, 0, 0.7),
-                0 0 30px rgba(255, 0, 110, 0.4);
-            }
-          }
-          
-          .hide-scrollbar::-webkit-scrollbar-thumb {
-            animation: 
-              liquidFill 5s linear infinite,
-              neonGlow 2.5s ease-in-out infinite;
-          }
-          
           .hide-scrollbar::-webkit-scrollbar-track {
-            animation: trackGlow 3s ease-in-out infinite;
+            background: transparent;
           }
-          
-          /* Create filling effect with pseudo-element */
-          .hide-scrollbar::-webkit-scrollbar-thumb::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, 
-              transparent 0%,
-              rgba(255, 255, 255, 0.3) 50%,
-              transparent 100%);
-            border-radius: 25px;
-            animation: fillShine 2s linear infinite;
+          .hide-scrollbar::-webkit-scrollbar-thumb {
+            background: hsl(var(--primary) / 0.6);
+            border-radius: 9999px;
           }
-          
-          @keyframes fillShine {
-            0% { transform: translateX(-100%); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateX(100%); opacity: 0; }
-          }
-          
-          /* Remove default scrollbar arrows and buttons */
-          .hide-scrollbar::-webkit-scrollbar-button {
-            display: none;
-          }
-          
-          .hide-scrollbar::-webkit-scrollbar-corner {
-            display: none;
+          .hide-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: hsl(var(--primary));
           }
         `}</style>
       </div>

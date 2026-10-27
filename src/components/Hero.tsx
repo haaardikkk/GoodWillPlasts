@@ -3,7 +3,7 @@ import { ArrowRight, Award, Truck, Shield, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 import heroImage from "@/assets/hero-drums.jpg";
-import heroVideo from "@/assets/main video.mp4";
+import heroVideo from "@/assets/hero-video-1080.mp4";
 import catalogPdf from "@/assets/catalog.pdf";
 
 // Slideshow images
@@ -32,7 +32,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen supports-[min-height:100svh]:min-h-[100svh] flex items-center overflow-hidden">
       {/* Background */}
       <motion.div 
         className="absolute inset-0"
@@ -264,18 +264,16 @@ const Hero = () => {
               <div className="absolute inset-0 z-10 flex items-center justify-center p-4">
                 <motion.video
                   src={heroVideo}
+                  poster={heroImage}
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="auto"
+                  aria-label="GoodWill Plast manufacturing video"
                   className="w-[95%] h-[95%] object-cover rounded-xl shadow-lg"
                   animate={{
                     y: [0, -20, 0],
-                    filter: [
-                      "saturate(1.1) brightness(1.05)",
-                      "saturate(1.2) brightness(1.1)",
-                      "saturate(1.1) brightness(1.05)"
-                    ]
                   }}
                   transition={{
                     y: {
@@ -283,11 +281,6 @@ const Hero = () => {
                       repeat: Infinity,
                       ease: "easeInOut"
                     },
-                    filter: {
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }
                   }}
                   whileHover={{ 
                     scale: 1.02

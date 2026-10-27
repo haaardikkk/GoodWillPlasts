@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { applySEO } from "@/lib/seo";
 
 const Resources = () => {
+  useEffect(() => {
+    applySEO({
+      title: "HDPE Drum & Container Buying Guides | GoodWill Plast",
+      description:
+        "Guides on choosing plastic drums, HDPE containers and industrial packaging for B2B buyers in India, from GoodWill Plast, Sonepat.",
+      canonicalUrl: "https://goodwillplast.com/resources",
+    });
+  }, []);
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -27,7 +38,7 @@ const Resources = () => {
               <li>HDPE plastic for durability and leak-proof storage</li>
               <li>Available in multiple colors for identification</li>
             </ul>
-            <a href="#product-categories" className="text-primary hover:underline">Browse HDPE drums</a>
+            <a href="/#product-categories" className="text-primary hover:underline">Browse HDPE drums</a>
           </article>
 
           <article className="bg-card border border-border rounded-xl p-6">
@@ -40,7 +51,7 @@ const Resources = () => {
               <li>Varied neck sizes and spout types</li>
               <li>Bulk orders across India</li>
             </ul>
-            <a href="#product-categories" className="text-primary hover:underline">Explore plastic containers</a>
+            <a href="/#product-categories" className="text-primary hover:underline">Explore plastic containers</a>
           </article>
 
           <article className="bg-card border border-border rounded-xl p-6">
@@ -49,7 +60,7 @@ const Resources = () => {
               We’re a B2B supplier of plastic drums, containers, cans, barrels, and specialized HDPE packaging solutions. Our factory in Sonepat, Haryana serves customers across India with quick delivery and consistent quality.
             </p>
             <div className="flex gap-4">
-              <a href="#contact" className="text-primary hover:underline">Contact us for bulk orders</a>
+              <a href="/#contact" className="text-primary hover:underline">Contact us for bulk orders</a>
               <Link to="/" className="text-primary hover:underline">Back to Home</Link>
             </div>
           </article>
